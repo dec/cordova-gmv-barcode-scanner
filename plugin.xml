@@ -20,11 +20,18 @@
         <framework src="Foundation.framework"/>
         <framework src="AVFoundation.framework"/>
         <framework src="UIKit.framework"/>
-        <framework spec="~&gt; 1.1" src="GoogleMobileVision/BarcodeDetector"/>
         <header-file src="src/ios/CDViOSScanner.h"/>
         <source-file src="src/ios/CDViOSScanner.m"/>
         <header-file src="src/ios/CameraViewController.h"/>
         <source-file src="src/ios/CameraViewController.m"/>
+    <podspec>
+      <config>
+        <source url="https://cdn.cocoapods.org/"/>
+      </config>
+      <pods use-frameworks="true">
+        <pod name="GoogleMobileVision/BarcodeDetector" spec="~&gt; 1.1" />
+      </pods>
+    </podspec>            
     </platform>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
